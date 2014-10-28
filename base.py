@@ -29,7 +29,7 @@ class SearchPage(BasePage):
     search_field = lambda self: self.driver.find_element_by_class_name('header-search-input-text')
     search_button = lambda self: self.driver.find_element_by_class_name('btn-link-i')
 
-    def search(self, value):
+    def type_search_text(self, value):
         self.search_field().send_keys(value)
 
     def submit(self):

@@ -13,7 +13,7 @@ class TestRozetkaSearch(unittest.TestCase):
         homepage = HomePage(self.browser)
         homepage.navigate()
         search_form = homepage.get_search_form()
-        search_form.search('D-Link DIR-826L')
+        search_form.type_search_text('D-Link DIR-826L')
         self.search_results = search_form.submit()
 
     def test_rozetka_search_d_link_status(self):
