@@ -27,8 +27,8 @@ class Rozetka(object):
 class TestRozetkaSearch(unittest.TestCase):
 
     def setUp(self):
-        page = Rozetka('http://rozetka.com.ua/search/', text="D-Link DIR-826L")
-        self.tree = html.fromstring(page.page_source())
+        self.page = Rozetka('http://rozetka.com.ua/search/', text="D-Link DIR-826L")
+        self.tree = html.fromstring(self.page.page_source())
 
     def test_search_d_link_price(self):
         price = self.tree.find_class("g-i-list-price-uah")[0].text
